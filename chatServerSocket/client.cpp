@@ -6,8 +6,8 @@
 
 using namespace std;
 
-const int PORT = 8080;
-const string SERVER_IP = "127.0.0.1";
+const int PORT = 3000;
+const string SERVER_IP = "192.168.230.41";
 
 void receiveMessages(int clientSocket) {
     char buffer[1024];
@@ -49,6 +49,7 @@ int main() {
     while (true) {
         cout << "Client: ";
         getline(cin, message);
+        message += "\n"; //FOR JAVA COMPATIBLE
         send(clientSocket, message.c_str(), message.size(), 0);
     }
 
