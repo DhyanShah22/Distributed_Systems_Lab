@@ -8,9 +8,9 @@ using namespace std;
 
 const int PORT = 8080;
 
-void handleClient(int clientSocket){
+void handleClient(int clientSocket) {
     char buffer[1024];
-    while(true){
+    while (true) {
         memset(buffer, 0, sizeof(buffer));
         ssize_t bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
         if (bytesReceived <= 0) {
@@ -28,6 +28,12 @@ void handleClient(int clientSocket){
 
 int main() {
     int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+//      struct timeval timeout;
+//      timeout.tv_sec = 10; // Timeout in seconds
+//      timeout.tv_usec = 0;
+//     if (setsockopt(serverSocket, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout)) < 0) {
+//     cerr << "Failed to set receive timeout" << endl;
+//      }
     if (serverSocket == -1) {
         cerr << "Failed to create socket" << endl;
         return -1;
