@@ -3,3 +3,7 @@ Client 5: HIIIIII
 Client 4: SSUUPPPP BROOOO
 Client 5: SEND ME THAT FILE
 File received: uploads/chat_log.txt
+Client 5: Recieved Thanks mate
+Client 4: hiihihih
+File received: uploads/example.txt
+File received: uploads/example.txt
