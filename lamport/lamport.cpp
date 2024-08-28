@@ -1,128 +1,99 @@
 #include <iostream>
 #include <thread>
 #include <vector>
-#include <queue>
 #include <mutex>
 #include <condition_variable>
-#include <chrono>
 #include <random>
+#include <chrono>
+#include <queue>
+#include <map>
 
-#define NUM_THREADS 3
-#define NUM_ITERATIONS 10
-#define BUFFER_SIZE 5
+using namespace std;
 
-struct Message {
-    int sender_id;
-    int timestamp;
-};
+std::mutex mtx;
+std::condition_variable cv;
+std::map<int, std::queue<int>> message_buffers;
+std::vector<int> logical_clocks;
+std::vector<std::mutex*> buffer_mutexes;
 
-class BoundedBuffer {
-private:
-    std::queue<Message> buffer;
-    std::mutex mtx;
-    std::condition_variable not_full, not_empty;
+void print_event_order(int thread_id, const std::vector<int>& event_order) {
+    std::cout << "Thread " << thread_id << " event order: ";
+    for (int event : event_order) {
+        std::cout << event << " ";
+    }
+    std::cout << std::endl;
+}
 
-public:
-    void addMessage(const Message& msg) {
+void thread_func(int thread_id, int num_iterations) {
+    std::vector<int> event_order;
+    int& logical_clock = logical_clocks[thread_id];
+    std::queue<int> local_buffer;
+    
+    std::default_random_engine generator;
+    std::uniform_int_distribution<int> distribution(0, 2);
+    
+    for (int i = 0; i < num_iterations; ++i) {
+        // Internal event
+        std::this_thread::sleep_for(std::chrono::milliseconds(distribution(generator) * 100));
+        logical_clock++;
+        event_order.push_back(logical_clock);
+        
+        // Sending message
+        int recipient_id = (thread_id + 1) % logical_clocks.size();
+        {
+            std::lock_guard<std::mutex> lock(*buffer_mutexes[recipient_id]);
+            message_buffers[recipient_id].push(logical_clock);
+        }
+        cv.notify_all();
+        
+        // Receiving message
         std::unique_lock<std::mutex> lock(mtx);
-        not_full.wait(lock, [this] { return buffer.size() < BUFFER_SIZE; });
-        buffer.push(msg);
-        not_empty.notify_all();
-    }
-
-    Message getMessage() {
-        std::unique_lock<std::mutex> lock(mtx);
-        not_empty.wait(lock, [this] { return !buffer.empty(); });
-        Message msg = buffer.front();
-        buffer.pop();
-        not_full.notify_all();
-        return msg;
-    }
-
-    bool isEmpty() {
-        std::lock_guard<std::mutex> lock(mtx);
-        return buffer.empty();
-    }
-};
-
-class Thread {
-private:
-    int id;
-    int clock;
-    std::vector<std::string> event_log;
-    BoundedBuffer& buffer;
-    std::mt19937 rng;
-
-    void internalEvent() {
-        clock++;
-        event_log.push_back("Thread " + std::to_string(id) + " internal event at time " + std::to_string(clock));
-    }
-
-    void sendMessage() {
-        clock++;
-        Message msg = {id, clock};
-        buffer.addMessage(msg);
-        event_log.push_back("Thread " + std::to_string(id) + " sent message at time " + std::to_string(clock));
-    }
-
-    void receiveMessage() {
-        Message msg = buffer.getMessage();
-        if (msg.sender_id != id) {
-            clock = std::max(clock, msg.timestamp) + 1;
-            event_log.push_back("Thread " + std::to_string(id) + " received message from Thread " + std::to_string(msg.sender_id) + " at time " + std::to_string(clock));
+        cv.wait(lock, [&] { return !message_buffers[thread_id].empty(); });
+        
+        std::lock_guard<std::mutex> buffer_lock(*buffer_mutexes[thread_id]);
+        while (!message_buffers[thread_id].empty()) {
+            int received_clock = message_buffers[thread_id].front();
+            message_buffers[thread_id].pop();
+            logical_clock = std::max(logical_clock, received_clock) + 1;
+            event_order.push_back(logical_clock);
         }
+        
+        print_event_order(thread_id, event_order);
     }
-
-    void randomSleep() {
-        std::uniform_int_distribution<int> dist(100, 500);
-        std::this_thread::sleep_for(std::chrono::milliseconds(dist(rng)));
-    }
-
-public:
-    Thread(int id, BoundedBuffer& buf) : id(id), clock(0), buffer(buf), rng(std::random_device{}()) {}
-
-    void run() {
-        for (int i = 0; i < NUM_ITERATIONS; i++) {
-            randomSleep();
-            internalEvent();
-
-            randomSleep();
-            if (rng() % 2 == 0) {
-                sendMessage();
-            } else {
-                receiveMessage();
-            }
-        }
-
-        // Print event log
-        std::cout << "Thread " << id << " event log:\n";
-        for (const auto& log : event_log) {
-            std::cout << log << std::endl;
-        }
-    }
-};
+}
 
 int main() {
-    BoundedBuffer buffer;
+    int num_threads = 2;  // Updated to use 2 processes (threads)
+    int num_iterations = 5;
+    
+    logical_clocks.resize(num_threads, 0);
+    
+    // Initialize message_buffers map with empty queues
+    for (int i = 0; i < num_threads; ++i) {
+        message_buffers[i] = std::queue<int>();
+    }
+
+    // Initialize buffer_mutexes with pointers to std::mutex objects
+    std::vector<std::mutex*> mutex_pointers;
+    for (int i = 0; i < num_threads; ++i) {
+        std::mutex* mutex_ptr = new std::mutex();
+        mutex_pointers.push_back(mutex_ptr);
+    }
+    buffer_mutexes = mutex_pointers;
+
     std::vector<std::thread> threads;
-    std::vector<Thread*> thread_objects;
-
-    // Create and start threads
-    for (int i = 0; i < NUM_THREADS; i++) {
-        Thread* t = new Thread(i, buffer);
-        thread_objects.push_back(t);
-        threads.emplace_back(&Thread::run, t);
+    for (int i = 0; i < num_threads; ++i) {
+        threads.emplace_back(thread_func, i, num_iterations);
     }
-
-    // Join threads
-    for (auto& th : threads) {
-        th.join();
+    
+    for (auto& t : threads) {
+        t.join();
     }
-
-    // Clean up
-    for (auto t : thread_objects) {
-        delete t;
+    
+    // Clean up dynamically allocated mutexes
+    for (auto mutex_ptr : buffer_mutexes) {
+        delete mutex_ptr;
     }
-
+    
     return 0;
 }
