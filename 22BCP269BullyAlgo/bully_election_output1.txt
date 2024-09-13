@@ -1,0 +1,17 @@
+Initial leader is Process 5
+Process 5 has failed.
+Process 1 initiating election.
+Process 4 initiating election.
+Process 4 becomes the new leader.
+Process 4 informs Process 1 about new leadership.
+Process 4 informs Process 2 about new leadership.
+Process 4 informs Process 3 about new leadership.
+Process 1 sending election message to Process 2
+Process 2 responds to election.
+Process 2 initiating election.
+Process 2 sending election message to Process 3
+Process 3 responds to election.
+Process 3 initiating election.
+Process 3 sending election message to Process 4
+Process 4 responds to election.
+Process 5 has recovered.
