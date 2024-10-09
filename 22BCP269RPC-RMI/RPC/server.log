@@ -1,0 +1,4 @@
+{"level":"info","message":"gRPC server started on port 50051","timestamp":"2024-10-09T13:00:33.767Z"}
+{"level":"info","message":"Add operation: 45 + 34 = 79","timestamp":"2024-10-09T13:00:57.635Z"}
+{"level":"info","message":"gRPC server started on port 50051","timestamp":"2024-10-09T13:03:36.042Z"}
+{"level":"info","message":"Add operation: 34 + 56 = 90","timestamp":"2024-10-09T13:03:51.698Z"}

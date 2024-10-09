@@ -1,0 +1,16 @@
+Oct 09, 2024 6:26:34 PM BankImpl createAccount
+INFO: Created account for Dhyan Shah with ID: 1
+Oct 09, 2024 6:27:12 PM BankImpl createAccount
+INFO: Created account for Dhyan Shah with ID: 2
+Oct 09, 2024 6:27:19 PM BankImpl deposit
+INFO: Deposited 30000.0 to account ID: 2
+Oct 09, 2024 6:27:28 PM BankImpl getBalance
+INFO: Fetched balance for account ID: 2 -> Balance: 30000.0
+Oct 09, 2024 6:27:40 PM BankImpl withdraw
+WARNING: Attempted withdrawal from non-existent account ID: 15000
+Oct 09, 2024 6:27:47 PM BankImpl getBalance
+INFO: Fetched balance for account ID: 2 -> Balance: 30000.0
+Oct 09, 2024 6:27:53 PM BankImpl withdraw
+INFO: Withdrew 15000.0 from account ID: 2
+Oct 09, 2024 6:27:56 PM BankImpl getBalance
+INFO: Fetched balance for account ID: 2 -> Balance: 15000.0

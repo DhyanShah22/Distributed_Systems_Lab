@@ -1,0 +1,4 @@
+{"level":"info","message":"User input: 45, 34 | Selected operation: 1","timestamp":"2024-10-09T13:00:57.585Z"}
+{"level":"info","message":"Add result: 79 | Message: Addition successful","timestamp":"2024-10-09T13:00:57.648Z"}
+{"level":"info","message":"User input: 34, 56 | Selected operation: 1","timestamp":"2024-10-09T13:03:51.643Z"}
+{"level":"info","message":"Add result: 90 | Message: Addition successful","timestamp":"2024-10-09T13:03:51.708Z"}
