@@ -1,9 +1,7 @@
-Client 5: Hiii
-Client 5: HIIIIII
-Client 4: SSUUPPPP BROOOO
-Client 5: SEND ME THAT FILE
-File received: uploads/chat_log.txt
-Client 5: Recieved Thanks mate
-Client 4: hiihihih
-File received: uploads/example.txt
-File received: uploads/example.txt
+Client 4: Hi
+Client 5: Hello
+Client 4: Yes sir
+Client 5: Yes brother
+Client 4: How are you?
+Client 5: Amazing mate you tell
+Client 4: Good brother
