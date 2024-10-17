@@ -14,3 +14,21 @@ Oct 09, 2024 6:27:53 PM BankImpl withdraw
 INFO: Withdrew 15000.0 from account ID: 2
 Oct 09, 2024 6:27:56 PM BankImpl getBalance
 INFO: Fetched balance for account ID: 2 -> Balance: 15000.0
+Oct 17, 2024 5:19:01 PM BankImpl createAccount
+INFO: Created account for Dheeraj with ID: 1
+Oct 17, 2024 5:19:09 PM BankImpl deposit
+INFO: Deposited 345667.0 to account ID: 1
+Oct 17, 2024 5:19:12 PM BankImpl getBalance
+WARNING: Account not found with ID: 2
+Oct 17, 2024 5:19:21 PM BankImpl getBalance
+INFO: Fetched balance for account ID: 1 -> Balance: 345667.0
+Oct 17, 2024 5:19:26 PM BankImpl withdraw
+INFO: Withdrew 23.0 from account ID: 1
+Oct 17, 2024 5:19:31 PM BankImpl getBalance
+INFO: Fetched balance for account ID: 1 -> Balance: 345644.0
+Oct 17, 2024 5:27:14 PM BankImpl createAccount
+INFO: Created account for DHYAN with ID: 2
+Oct 17, 2024 5:27:25 PM BankImpl deposit
+INFO: Deposited 345.0 to account ID: 2
+Oct 17, 2024 5:27:30 PM BankImpl getBalance
+INFO: Fetched balance for account ID: 2 -> Balance: 345.0

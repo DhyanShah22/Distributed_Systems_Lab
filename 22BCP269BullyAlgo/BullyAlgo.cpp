@@ -119,7 +119,7 @@ void simulate(vector<Process*> &processes, mutex &outputMutex, ofstream &outputF
 }
 
 int main() {
-    ofstream outputFile("bully_election_output1.txt");
+    ofstream outputFile("bully_election_output2.txt");
     mutex outputMutex;
 
     vector<Process*> processes;

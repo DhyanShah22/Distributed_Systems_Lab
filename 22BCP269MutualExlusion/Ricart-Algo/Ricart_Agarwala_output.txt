@@ -1,0 +1,31 @@
+Process 1 requested critical section at timestamp -1686192010
+Process 1 entered critical section
+Process 2 requested critical section at timestamp -1686173546
+Process 3 requested critical section at timestamp -1686161185
+Process 1 released critical section
+Process 1 requested critical section at timestamp -1485882241
+Process 1 entered critical section
+Process 1 released critical section
+Process 1 requested critical section at timestamp -1285570543
+Process 1 entered critical section
+Process 1 released critical section
+New process 4 joined the system
+Process 4 requested critical section at timestamp -685900120
+New process 5 joined the system
+Process 5 requested critical section at timestamp 314297574
+New process 6 joined the system
+Process 6 requested critical section at timestamp 1314452846
+New process 7 joined the system
+Process 7 requested critical section at timestamp -1980251952
+New process 8 joined the system
+Process 8 requested critical section at timestamp -980087378
+New process 9 joined the system
+Process 9 requested critical section at timestamp 20162629
+New process 10 joined the system
+Process 10 requested critical section at timestamp 1020431217
+New process 11 joined the system
+Process 11 requested critical section at timestamp 2020698485
+New process 12 joined the system
+Process 12 requested critical section at timestamp -1274163373
+New process 13 joined the system
+Process 13 requested critical section at timestamp -273816289

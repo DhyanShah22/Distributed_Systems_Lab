@@ -2,3 +2,7 @@
 {"level":"info","message":"Add result: 79 | Message: Addition successful","timestamp":"2024-10-09T13:00:57.648Z"}
 {"level":"info","message":"User input: 34, 56 | Selected operation: 1","timestamp":"2024-10-09T13:03:51.643Z"}
 {"level":"info","message":"Add result: 90 | Message: Addition successful","timestamp":"2024-10-09T13:03:51.708Z"}
+{"level":"info","message":"User input: 34, 32 | Selected operation: 2","timestamp":"2024-10-17T11:44:37.100Z"}
+{"level":"info","message":"Subtract result: 2 | Message: Subtraction successful","timestamp":"2024-10-17T11:44:37.168Z"}
+{"level":"info","message":"User input: 35, 67 | Selected operation: 3","timestamp":"2024-10-17T11:56:36.064Z"}
+{"level":"info","message":"Multiply result: 2345 | Message: Multiplication successful","timestamp":"2024-10-17T11:56:36.121Z"}
