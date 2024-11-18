@@ -1,18 +1,18 @@
 syntax = "proto3";
 
 service Calculator {
-    rpc Add (OperationRequest) returns (OperationResponse);
-    rpc Subtract (OperationRequest) returns (OperationResponse);
-    rpc Multiply (OperationRequest) returns (OperationResponse);
-    rpc Divide (OperationRequest) returns (OperationResponse);
+    rpc add (OperationRequest) returns (OperationResponse);
+    rpc subtract (OperationRequest) returns (OperationResponse);
+    rpc multiply (OperationRequest) returns (OperationResponse);
+    rpc divide (OperationRequest) returns (OperationResponse);
 }
 
-message OperationRequest {
+message OperationRequest{
     int32 num1 = 1;
     int32 num2 = 2;
 }
 
 message OperationResponse {
     int32 result = 1;
-    string message = 2;
+    int32 message = 2;
 }

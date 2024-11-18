@@ -1,0 +1,216 @@
+Process 1 requested critical section at timestamp 103.03789199888706
+Process 1 entered critical section
+Process 2 requested critical section at timestamp 104.21734699979424
+Process 3 requested critical section at timestamp 105.01008399948478
+Simulation Ended!
+Process 4 has joined
+Process 4 requested critical section at timestamp 206.35362099856138
+Process 1 released critical section
+Process 1 requested critical section at timestamp 309.2007079999894
+Process 1 requested critical section at timestamp 92.3684139996767
+Process 1 entered critical section
+Process 2 requested critical section at timestamp 93.26184399984777
+Process 3 requested critical section at timestamp 94.08057199977338
+Process 4 has joined
+Process 4 requested critical section at timestamp 195.2145479992032
+Process 1 released critical section
+Process 5 has joined
+Process 5 requested critical section at timestamp 296.19956499896944
+Process 1 requested critical section at timestamp 298.2881949990988
+Process 6 has joined
+Process 6 requested critical section at timestamp 397.2536989990622
+Process 7 has joined
+Process 7 requested critical section at timestamp 497.65489500015974
+Process 8 has joined
+Process 8 requested critical section at timestamp 597.4227479994297
+Process 9 has joined
+Process 9 requested critical section at timestamp 698.3100339993834
+Process 10 has joined
+Process 10 requested critical section at timestamp 799.1167130004615
+Process 11 has joined
+Process 11 requested critical section at timestamp 899.945025999099
+Process 12 has joined
+Process 12 requested critical section at timestamp 1001.0217029992491
+Process 13 has joined
+Process 13 requested critical section at timestamp 1102.1613689996302
+Process 14 has joined
+Process 14 requested critical section at timestamp 1203.4935909993947
+Process 15 has joined
+Process 15 requested critical section at timestamp 1303.8419540002942
+Process 16 has joined
+Process 16 requested critical section at timestamp 1404.792453000322
+Process 17 has joined
+Process 17 requested critical section at timestamp 1507.961954999715
+Process 18 has joined
+Process 18 requested critical section at timestamp 1610.2454530000687
+Process 19 has joined
+Process 19 requested critical section at timestamp 1711.8551719989628
+Process 20 has joined
+Process 20 requested critical section at timestamp 1813.1399739999324
+Process 21 has joined
+Process 21 requested critical section at timestamp 1914.2927209995687
+Process 22 has joined
+Process 22 requested critical section at timestamp 2014.8423640001565
+Process 23 has joined
+Process 23 requested critical section at timestamp 2116.1935890000314
+Process 24 has joined
+Process 24 requested critical section at timestamp 2217.3232840001583
+Process 25 has joined
+Process 25 requested critical section at timestamp 2318.3966789990664
+Process 26 has joined
+Process 26 requested critical section at timestamp 2418.706635000184
+Process 27 has joined
+Process 27 requested critical section at timestamp 2519.9951959997416
+Process 28 has joined
+Process 28 requested critical section at timestamp 2621.3884929995984
+Process 29 has joined
+Process 29 requested critical section at timestamp 2722.48727699928
+Process 30 has joined
+Process 30 requested critical section at timestamp 2824.157485999167
+Process 31 has joined
+Process 31 requested critical section at timestamp 2925.477693999186
+Process 32 has joined
+Process 32 requested critical section at timestamp 3025.7457950003445
+Process 33 has joined
+Process 33 requested critical section at timestamp 3127.085782999173
+Process 34 has joined
+Process 34 requested critical section at timestamp 3228.219443999231
+Process 35 has joined
+Process 35 requested critical section at timestamp 3329.439810998738
+Process 36 has joined
+Process 36 requested critical section at timestamp 3429.5915409997106
+Process 37 has joined
+Process 37 requested critical section at timestamp 3530.6998709999025
+Process 38 has joined
+Process 38 requested critical section at timestamp 3631.956678999588
+Process 39 has joined
+Process 39 requested critical section at timestamp 3733.0019690003246
+Process 40 has joined
+Process 40 requested critical section at timestamp 3834.2487989999354
+Process 41 has joined
+Process 41 requested critical section at timestamp 3935.4509319998324
+Process 42 has joined
+Process 42 requested critical section at timestamp 4035.546375999227
+Process 43 has joined
+Process 43 requested critical section at timestamp 4135.659662999213
+Process 44 has joined
+Process 44 requested critical section at timestamp 4236.761817999184
+Process 45 has joined
+Process 45 requested critical section at timestamp 4337.957125999033
+Process 46 has joined
+Process 46 requested critical section at timestamp 4439.152340000495
+Process 47 has joined
+Process 47 requested critical section at timestamp 4540.27864000015
+Process 48 has joined
+Process 48 requested critical section at timestamp 4641.362840998918
+Process 49 has joined
+Process 49 requested critical section at timestamp 4741.728764999658
+Process 50 has joined
+Process 50 requested critical section at timestamp 4843.190356999636
+Process 51 has joined
+Process 51 requested critical section at timestamp 4944.519735999405
+Process 52 has joined
+Process 52 requested critical section at timestamp 5044.746264999732
+Process 53 has joined
+Process 53 requested critical section at timestamp 5146.00066800043
+Process 54 has joined
+Process 54 requested critical section at timestamp 5246.964276999235
+Process 55 has joined
+Process 55 requested critical section at timestamp 5347.593806000426
+Process 56 has joined
+Process 56 requested critical section at timestamp 5448.340321999043
+Process 57 has joined
+Process 57 requested critical section at timestamp 5549.4336430002
+Process 58 has joined
+Process 58 requested critical section at timestamp 5649.657287999988
+Process 59 has joined
+Process 59 requested critical section at timestamp 5750.857047999278
+Process 60 has joined
+Process 60 requested critical section at timestamp 5852.006984999403
+Process 61 has joined
+Process 61 requested critical section at timestamp 5953.405879000202
+Process 62 has joined
+Process 62 requested critical section at timestamp 6053.497112000361
+Process 63 has joined
+Process 63 requested critical section at timestamp 6154.247494999319
+Process 64 has joined
+Process 64 requested critical section at timestamp 6255.039038999006
+Process 65 has joined
+Process 65 requested critical section at timestamp 6355.874359998852
+Process 66 has joined
+Process 66 requested critical section at timestamp 6457.068748999387
+Process 67 has joined
+Process 67 requested critical section at timestamp 6557.750032000244
+Process 68 has joined
+Process 68 requested critical section at timestamp 6657.294118000194
+Process 69 has joined
+Process 69 requested critical section at timestamp 6758.206566998735
+Process 70 has joined
+Process 70 requested critical section at timestamp 6859.357563000172
+Process 71 has joined
+Process 71 requested critical section at timestamp 6959.445249998942
+Process 72 has joined
+Process 72 requested critical section at timestamp 7059.504452999681
+Process 73 has joined
+Process 73 requested critical section at timestamp 7159.680883999914
+Process 74 has joined
+Process 74 requested critical section at timestamp 7261.250856999308
+Process 75 has joined
+Process 75 requested critical section at timestamp 7362.313777999952
+Process 76 has joined
+Process 76 requested critical section at timestamp 7462.56298599951
+Process 77 has joined
+Process 77 requested critical section at timestamp 7562.301455000415
+Process 78 has joined
+Process 78 requested critical section at timestamp 7662.927306000143
+Process 79 has joined
+Process 79 requested critical section at timestamp 7763.624365000054
+Process 80 has joined
+Process 80 requested critical section at timestamp 7864.505712999031
+Process 81 has joined
+Process 81 requested critical section at timestamp 7965.149189999327
+Process 82 has joined
+Process 82 requested critical section at timestamp 8065.7886059992015
+Process 83 has joined
+Process 83 requested critical section at timestamp 8166.653415000066
+Process 84 has joined
+Process 84 requested critical section at timestamp 8267.171102998778
+Process 85 has joined
+Process 85 requested critical section at timestamp 8367.922484999523
+Process 86 has joined
+Process 86 requested critical section at timestamp 8468.575974998996
+Process 87 has joined
+Process 87 requested critical section at timestamp 8568.197321999818
+Process 88 has joined
+Process 88 requested critical section at timestamp 8668.79553099908
+Process 89 has joined
+Process 89 requested critical section at timestamp 8769.682330999523
+Process 90 has joined
+Process 90 requested critical section at timestamp 8869.566515998915
+Process 91 has joined
+Process 91 requested critical section at timestamp 8969.764806000516
+Process 92 has joined
+Process 92 requested critical section at timestamp 9071.573389999568
+Process 93 has joined
+Process 93 requested critical section at timestamp 9172.17427800037
+Process 94 has joined
+Process 94 requested critical section at timestamp 9273.022138999775
+Process 95 has joined
+Process 95 requested critical section at timestamp 9374.074897998944
+Process 96 has joined
+Process 96 requested critical section at timestamp 9475.364217000082
+Process 97 has joined
+Process 97 requested critical section at timestamp 9575.756881998852
+Process 98 has joined
+Process 98 requested critical section at timestamp 9677.073522999883
+Process 99 has joined
+Process 99 requested critical section at timestamp 9777.678082000464
+Process 100 has joined
+Process 100 requested critical section at timestamp 9879.036911999807
+Process 101 has joined
+Process 101 requested critical section at timestamp 9980.206232000142
+Process 102 has joined
+Process 102 requested critical section at timestamp 10081.44812499918
+Simulation Ended!
+Process 103 has joined
+Process 103 requested critical section at timestamp 10182.431769000366

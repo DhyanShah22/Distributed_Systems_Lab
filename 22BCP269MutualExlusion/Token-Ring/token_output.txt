@@ -1,0 +1,26 @@
+Process 1 Entered the Critical Section!
+Process 1 Exited the critical section
+Process 2 Entered the Critical Section!
+Process 2 Exited the critical section
+Process 3 Entered the Critical Section!
+Process 3 Exited the critical section
+Process 1 Entered the Critical Section!
+Process 1 Exited the critical section
+Process 2 Entered the Critical Section!
+Process 2 Exited the critical section
+Process 3 Entered the Critical Section!
+Process 3 Exited the critical section
+Process 1 Entered the Critical Section!
+Process 1 Exited the critical section
+Process 2 Entered the Critical Section!
+Process 4 joined the system
+Process 2 Exited the critical section
+Process 3 Entered the Critical Section!
+Process 3 Exited the critical section
+Process 4 Entered the Critical Section!
+Process 4 Exited the critical section
+Process 5 joined the system
+Process 6 joined the system
+Process 7 joined the system
+Process 8 joined the system
+Process 9 joined the system

@@ -1,31 +1,128 @@
-Process 1 requested critical section at timestamp -1686192010
+Process 1 requested critical section at timestamp 84.42252900078893
 Process 1 entered critical section
-Process 2 requested critical section at timestamp -1686173546
-Process 3 requested critical section at timestamp -1686161185
+Process 2 requested critical section at timestamp 85.44743300043046
+Process 3 requested critical section at timestamp 86.0777839999646
 Process 1 released critical section
-Process 1 requested critical section at timestamp -1485882241
+Process 2 entered critical section
+Process 1 requested critical section at timestamp 290.3317850008607
+Process 2 released critical section
+Process 3 entered critical section
+Process 2 requested critical section at timestamp 490.69788300059736
+Process 3 released critical section
 Process 1 entered critical section
+Process 3 requested critical section at timestamp 592.5569919999689
 Process 1 released critical section
-Process 1 requested critical section at timestamp -1285570543
+Process 2 entered critical section
+Process 1 requested critical section at timestamp 692.9832620006055
+Process 2 released critical section
+Process 3 entered critical section
+Process 2 requested critical section at timestamp 894.5372189991176
+Process 3 released critical section
 Process 1 entered critical section
+Process 3 requested critical section at timestamp 995.4349869992584
 Process 1 released critical section
 New process 4 joined the system
-Process 4 requested critical section at timestamp -685900120
+Process 4 requested critical section at timestamp 1086.5818019993603
+Process 2 entered critical section
+Process 2 released critical section
+Process 3 entered critical section
+Process 3 released critical section
+Process 4 entered critical section
+Process 4 released critical section
+Process 4 requested critical section at timestamp 1588.6440779995173
+Process 4 entered critical section
+Process 4 released critical section
+Process 4 requested critical section at timestamp 1788.946514999494
+Process 4 entered critical section
+Process 4 released critical section
 New process 5 joined the system
-Process 5 requested critical section at timestamp 314297574
+Process 5 requested critical section at timestamp 2087.708790000528
+Process 5 entered critical section
+Process 5 released critical section
+Process 5 requested critical section at timestamp 2289.1562409996986
+Process 5 entered critical section
+Process 5 released critical section
+Process 5 requested critical section at timestamp 2490.427155999467
+Process 5 entered critical section
+Process 5 released critical section
 New process 6 joined the system
-Process 6 requested critical section at timestamp 1314452846
+Process 6 requested critical section at timestamp 3088.989362999797
+Process 6 entered critical section
+Process 6 released critical section
+Process 6 requested critical section at timestamp 3290.6742020007223
+Process 6 entered critical section
+Process 6 released critical section
+Process 6 requested critical section at timestamp 3492.5621450003237
+Process 6 entered critical section
+Process 6 released critical section
 New process 7 joined the system
-Process 7 requested critical section at timestamp -1980251952
+Process 7 requested critical section at timestamp 4090.20429199934
+Process 7 entered critical section
+Process 7 released critical section
+Process 7 requested critical section at timestamp 4290.907165000215
+Process 7 entered critical section
+Process 7 released critical section
+Process 7 requested critical section at timestamp 4492.369565000758
+Process 7 entered critical section
+Process 7 released critical section
 New process 8 joined the system
-Process 8 requested critical section at timestamp -980087378
+Process 8 requested critical section at timestamp 5091.113152999431
+Process 8 entered critical section
+Process 8 released critical section
+Process 8 requested critical section at timestamp 5292.426133999601
+Process 8 entered critical section
+Process 8 released critical section
+Process 8 requested critical section at timestamp 5493.687539000064
+Process 8 entered critical section
+Process 8 released critical section
 New process 9 joined the system
-Process 9 requested critical section at timestamp 20162629
+Process 9 requested critical section at timestamp 6092.102462999523
+Process 9 entered critical section
+Process 9 released critical section
+Process 9 requested critical section at timestamp 6293.321623999625
+Process 9 entered critical section
+Process 9 released critical section
+Process 9 requested critical section at timestamp 6495.2652509994805
+Process 9 entered critical section
+Process 9 released critical section
 New process 10 joined the system
-Process 10 requested critical section at timestamp 1020431217
+Process 10 requested critical section at timestamp 7093.120045999065
+Process 10 entered critical section
+Process 10 released critical section
+Process 10 requested critical section at timestamp 7294.30178900063
+Process 10 entered critical section
+Process 10 released critical section
+Process 10 requested critical section at timestamp 7494.748436000198
+Process 10 entered critical section
+Process 10 released critical section
 New process 11 joined the system
-Process 11 requested critical section at timestamp 2020698485
+Process 11 requested critical section at timestamp 8094.354846000671
+Process 11 entered critical section
+Process 11 released critical section
+Process 11 requested critical section at timestamp 8297.537827000022
+Process 11 entered critical section
+Process 11 released critical section
+Process 11 requested critical section at timestamp 8498.994618000463
+Process 11 entered critical section
+Process 11 released critical section
 New process 12 joined the system
-Process 12 requested critical section at timestamp -1274163373
+Process 12 requested critical section at timestamp 9095.46036599949
+Process 12 entered critical section
+Process 12 released critical section
+Process 12 requested critical section at timestamp 9297.157494999468
+Process 12 entered critical section
+Process 12 released critical section
+Process 12 requested critical section at timestamp 9498.429315000772
+Process 12 entered critical section
+Process 12 released critical section
+Simulation ended.
 New process 13 joined the system
-Process 13 requested critical section at timestamp -273816289
+Process 13 requested critical section at timestamp 10096.572287999094
+Process 13 entered critical section
+Process 13 released critical section
+Process 13 requested critical section at timestamp 10298.032926000655
+Process 13 entered critical section
+Process 13 released critical section
+Process 13 requested critical section at timestamp 10499.245231000707
+Process 13 entered critical section
+Process 13 released critical section

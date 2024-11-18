@@ -1,7 +1,2 @@
-Client 4: Hi
 Client 5: Hello
-Client 4: Yes sir
-Client 5: Yes brother
-Client 4: How are you?
-Client 5: Amazing mate you tell
-Client 4: Good brother
+Client 4: hIIII
