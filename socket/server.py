@@ -1,55 +1,37 @@
 import socket 
-import threading
-
-clients = {}
-
-def handle_client(client, addr):
-    client_id = f"Client: {len(clients) + 1}"
-    clients[client] = client_id
-    print(f"[New connection] {client_id} from {addr}")
-
-    try:
-        while True:
-            msg = client.recv(1024).decode()
-            if not msg:
-                break
-            log_msg = f"[{client_id}]: {msg}"
-            print(log_msg)
-            broadcast_message(log_msg, sender=client)
-    except:
-        print(f"DISCONNECTED {client_id}")
-    finally:
-        clients.pop(client, None)
-        client.close()
-    
-def broadcast_message(message, sender):
-    for client in clients:
-        if client != sender:
-            try:
-                client.send(message.encode())
-            except:
-                print("[ERROR] Failed to send message to a client.")
-
 
 def main():
     HOST = '127.0.0.1'
-    PORT = 8000
+    PORT = int(input("Enter the port to bind server: "))
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.bind((HOST, PORT))
     server.listen()
+    print(f"[SERVER] listening at {HOST} : {PORT}")
 
     while True:
         client, addr = server.accept()
-        print(f"[CONNECTTION REQUEST] from {addr}")
+        print(f"[REQUEST] to connect from {addr}")
+        approve = input(f"Approve connection from {addr}? [y/n]").strip().lower()
+        
+        if approve == 'y':
+            client.send("[SERVER]: Connection accepted.".encode())
+            print(f"[CONNECTION] from {addr} accepted")
 
-        accept = input(f"Accept connection from {addr} [y/n]? ").strip().lower()
-        if accept == 'y':
-            client.send("[SERVER]: connection accepted".encode())
-            threading.Thread(target=handle_client, args=(client, addr), daemon=True).start()
-        else:
-            client.send("[SERVER]: Connection declined".encode())
+            while True:
+                msg = client.recv(1024).decode()
+                print(msg)
+                if msg.lower() == 'bye':
+                    client.send("Bye".encode())
+                    break
+                reply = msg.upper()
+                client.send(reply.encode())
+            
+            print(f"[DISSCONNECTED]: CLIENT CLOSES")
             client.close()
-            print(f"[DECLINED] Connection from {addr}")
+        else:
+            client.send("[SERVER]: Connection denied".encode())
+            client.close
+            print(f"[DECLINED] connection from {addr}")
 
 if __name__ == '__main__':
     main()

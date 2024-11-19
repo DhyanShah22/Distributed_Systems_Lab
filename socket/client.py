@@ -1,32 +1,28 @@
-import socket 
-import threading
+import socket
 
-def receive_messages():
-    while True:
-        try:
-            message = client.recv(1024).decode()
-            print(message)
-        except:
-            print("[DISCONNECTED]")
-            client.close()
-            break
+def main():
+    HOST = '127.0.0.1'
+    PORT = int(input('Enter the port to connect the client'))
 
-HOST = '127.0.0.1'
-PORT = 8000
+    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client.connect((HOST, PORT))
+    approval_message = client.recv(1024).decode()
+    print(approval_message)
 
-client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect((HOST, PORT))
+    if 'denied' in approval_message.lower():
+        print('Connection denied')
+    else:
+        while True:
+            msg = input("You: ")
+            client.send(msg.encode())
+            reply = client.recv(1024).decode()
+            print(f"Server: {reply}")
+            if reply == 'Bye':
+                break
+        
+        print("[DISCONNECTED]")
+        client.close()
 
-approval_msg = client.recv(1024).decode()
-print(approval_msg)
 
-if 'denied' in approval_msg.lower():
-    print('Connection denied')
-else:
-    threading.Thread(target=receive_messages, daemon=True).start()
-    print("CHAT STARTED")
-    while True:
-        msg = input()
-        if msg.lower() == 'exit':
-            break
-        client.send(msg.encode())
+if __name__ == '__main__':
+    main()

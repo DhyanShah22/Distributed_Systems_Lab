@@ -1,7 +1,0 @@
-[NEW CONNECTION] Client 1 connected from ('127.0.0.1', 41772)
-[NEW CONNECTION] Client 2 connected from ('127.0.0.1', 41774)
-Client 2: Hello
-Client 1: Yes mate how are you
-Client 2: Amazing mate wbu
-[NEW CONNECTION] Client 3 connected from ('127.0.0.1', 41576)
-Client 3: hi

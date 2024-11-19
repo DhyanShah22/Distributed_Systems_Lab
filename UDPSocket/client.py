@@ -1,25 +1,23 @@
 import socket
-import threading
 
-def receive_messages():
+def main():
+    HOST = '127.0.0.1'
+    PORT = int(input("Enter the port to connect the client"))
+
+    client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    print("Connected to UDP server")
+
     while True:
-        try:
-            msg, addr = client.recvfrom(1024)  
-            print(msg.decode())
-        except:
-            print("[DISCONNECTED]")
+        msg = input("You: ")
+        client.sendto(msg.encode(), (HOST, PORT))
+        reply, _ = client.recvfrom(1024) 
+        reply = reply.decode()
+        print(f"[SERVER]: {reply}")
+        if reply == "Bye":
             break
+    
+    print("[DISCONNECTDE]")
+    client.close()
 
-HOST = '127.0.0.1'
-PORT = 5000
-
-client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  
-
-threading.Thread(target=receive_messages, daemon=True).start()
-
-print("[CHAT STARTED]")
-while True:
-    msg = input()
-    if msg.lower() == 'exit':
-        break
-    client.sendto(msg.encode(), (HOST, PORT))  
+if __name__ == "__main__":
+    main()  
